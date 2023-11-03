@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { Card } from "../components/Card"
 
 export const ComprasPage = () => {
     const [products, setProducts] = useState([])
@@ -19,7 +20,10 @@ export const ComprasPage = () => {
     <>
         <h1>Shopping</h1>
         <hr/>
-        
+
+        {products.map(product =>(
+            <Card image={product.image} title={product.title} description={product.description} price={product.price}></Card>
+        ))}
     </>
   )
 }
