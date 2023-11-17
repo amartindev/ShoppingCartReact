@@ -1,12 +1,16 @@
 import { Badge } from "@mui/material";
 import { ShoppingCart } from "@mui/icons-material";
 import { NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { CartContext } from "../context/CartContext";
+
 
 export const NavBar = () => {
+    const { shoppingList } = useContext(CartContext)
     return (
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
             <div className="container-fluid">
-                <NavLink to='/' className="navbar-brand" href="#">
+                <NavLink to="/" className="navbar-brand" href="#">
                     Shopping Cart
                 </NavLink>
                 <button
@@ -26,7 +30,8 @@ export const NavBar = () => {
                 >
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <NavLink to='/'
+                            <NavLink
+                                to="/"
                                 className="nav-link active"
                                 aria-current="page"
                                 href="#"
@@ -35,8 +40,8 @@ export const NavBar = () => {
                             </NavLink>
                         </li>
                     </ul>
-                    <NavLink to='/carrito'>
-                        <Badge badgeContent={4} color="primary">
+                    <NavLink to="/cart">
+                        <Badge badgeContent={shoppingList.length} color="primary">
                             <ShoppingCart color="action" />
                         </Badge>
                     </NavLink>
