@@ -1,67 +1,90 @@
 /* Estilos para la tarjeta */
+
+.container-tarjeta {
+    display: grid;
+    gap: 2rem;
+    grid-auto-rows: 22rem;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    height: 800px;
+    overflow: hidden;
+}
+
 .tarjeta {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-imagen {
     border: 1px solid #ccc;
     border-radius: 4px;
-    padding: 10px;
-    margin-bottom: 10px;
-  }
-  
-  .tarjeta-imagen {
-    width: 100px;
-    height: 100px;
+    width: 80%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tarjeta-imagen {
+    width: auto;
+    height: 90%;
     object-fit: cover;
-    border-radius: 4px;
-    margin-right: 10px;
-  }
-  
-  .tarjeta-contenido {
+    transition: transform 0.3s ease-in-out;
+}
+
+.container-imagen:hover .tarjeta-imagen {
+  transform: scale(1.1);
+}
+
+.tarjeta-contenido {
     flex: 1;
-  }
-  
-  .tarjeta-titulo {
+    height: 100%;
+    width: 100%;
+}
+
+.tarjeta-titulo {
     margin: 0;
-  }
-  
-  .tarjeta-descripcion {
+    font-size: medium;
+}
+
+.tarjeta-descripcion {
     margin: 0;
     margin-bottom: 10px;
-  }
-  
-  .tarjeta-precio {
+}
+
+.tarjeta-precio {
     margin: 0;
     font-weight: bold;
-  }
-  
-  .boton-agregar {
+}
+
+.boton-agregar {
     background-color: #4caf50;
     color: white;
     border: none;
     padding: 5px 10px;
     border-radius: 4px;
     cursor: pointer;
-  }
-  
-  .boton-agregar:hover {
+}
+
+.boton-agregar:hover {
     background-color: #45a049;
-  }
-  .boton-quitar {
+}
+.boton-quitar {
     background-color: #af4c4c;
     color: white;
     border: none;
     padding: 5px 10px;
     border-radius: 4px;
     cursor: pointer;
-  }
-  
-  .boton-quitar:hover {
+}
+
+.boton-quitar:hover {
     background-color: #a04545;
-  }
-  
-  /* Estilos para el carrito */
-  .carrito {
+}
+
+/* Estilos para el carrito */
+.carrito {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-  }
-  
+}

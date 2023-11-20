@@ -19,18 +19,19 @@ export const ComprasPage = () => {
         <>
             <h1>Shopping</h1>
             <hr />
-
-            {products.map((product) => (
-                <Card
-                    key={product.id}
-                    image={product.image}
-                    title={product.title}
-                    description={product.description}
-                    price={product.price}
-                    handleAdd={() => handleAdd(product)}
-                    handleDelete={() => handleDelete(product.id)}
-                ></Card>
-            ))}
+            <div className="container-tarjeta">
+                {products.map((product) => (
+                    <Card
+                        key={product.id}
+                        image={product.image}
+                        title={product.title}
+                        category={product.category}
+                        price={product.price}
+                        handleAdd={() => handleAdd(product)}
+                        handleDelete={() => handleDelete(product.id)}
+                    ></Card>
+                ))}
+            </div>
         </>
     );
 };
