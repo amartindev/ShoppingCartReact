@@ -11,7 +11,7 @@ export const NavBar = () => {
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
             <div className="container-fluid">
                 <NavLink to="/" className="navbar-brand" href="#">
-                    Shopping Cart
+                    Kleidung
                 </NavLink>
                 <button
                     className="navbar-toggler"

@@ -2,6 +2,7 @@ import { Route, Routes, Navigate } from "react-router-dom";
 import { NavBar } from "./components/NavBar";
 import { ComprasPage } from "./pages/ComprasPage";
 import { CartPage } from "./pages/CartPage";
+import { DetailPage } from "./pages/DetailPage";
 import { ProductsProvider } from "./context/ProductsProvider";
 import { CartProvider } from "./context/CartProvider";
 
@@ -10,7 +11,7 @@ export const CartApp = () => {
         <ProductsProvider>
             <CartProvider>
                 <NavBar></NavBar>
-                <div className="container">
+                <div>
                     <Routes>
                         <Route
                             path="/"
@@ -19,6 +20,10 @@ export const CartApp = () => {
                         <Route
                             path="/cart"
                             element={<CartPage></CartPage>}
+                        ></Route>
+                        <Route
+                            path="/detail"
+                            element={<DetailPage></DetailPage>}
                         ></Route>
                         <Route path="/*" element={<Navigate to="/" />}></Route>
                     </Routes>

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 export const Card = ({
     image,
@@ -21,12 +22,14 @@ export const Card = ({
 
     return (
         <div className="tarjeta">
-            <div className="container-imagen">
-            <img src={image} alt={title} className="tarjeta-imagen" />
-            </div>
+                <NavLink to="/detail" aria-current="page" href="#" className="container-imagen">
+                    <img src={image} alt={title} className="tarjeta-imagen" />
+                </NavLink>
             <div className="tarjeta-contenido">
                 <p className="tarjeta-categoria">{category}</p>
-                <h3 className="tarjeta-titulo">{title}</h3>
+                <NavLink to="/detail" aria-current="page" href="#" className="tarjeta-titulo-link">
+                <h3  className="tarjeta-titulo">{title}</h3>
+                </NavLink>
                 <p className="tarjeta-precio">${price}</p>
                 {added ? (
                     <button

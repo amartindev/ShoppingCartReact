@@ -17,9 +17,10 @@ export const ComprasPage = () => {
 
     return (
         <>
-            <h1>Shopping</h1>
-            <hr />
-            <div className="container-tarjeta">
+            <div className="hero">
+
+            </div>
+            <div className="container-tarjeta container">
                 {products.map((product) => (
                     <Card
                         key={product.id}

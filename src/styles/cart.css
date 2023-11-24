@@ -1,3 +1,21 @@
+body {
+  overflow-x: hidden;
+  background-color: rgb(253, 253, 253);
+}
+/* Estilos para el Hero */
+
+.hero {
+  background-image: url(/src/img/hero3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 60vh;
+  max-width: 100%;
+  margin: 0 0 2rem 0;
+  padding: 0;
+}
+
+
 /* Estilos para la tarjeta */
 
 .container-tarjeta {
@@ -5,7 +23,6 @@
     gap: 2rem;
     grid-auto-rows: 22rem;
     grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
-    height: 800px;
     overflow: hidden;
 }
 
@@ -37,14 +54,26 @@
 }
 
 .tarjeta-contenido {
-    flex: 1;
     height: 100%;
-    width: 100%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
 }
 
 .tarjeta-titulo {
     margin: 0;
     font-size: medium;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Número de líneas a mostrar */
+    -webkit-box-orient: vertical;
+    max-height: 3em;
+}
+
+.tarjeta-titulo-link {
+    text-decoration: none;
+    color: black;
 }
 
 .tarjeta-descripcion {
@@ -64,6 +93,7 @@
     padding: 5px 10px;
     border-radius: 4px;
     cursor: pointer;
+    margin-top: auto;
 }
 
 .boton-agregar:hover {
@@ -76,6 +106,7 @@
     padding: 5px 10px;
     border-radius: 4px;
     cursor: pointer;
+    margin-top: auto;
 }
 
 .boton-quitar:hover {
