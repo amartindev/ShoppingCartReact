@@ -1,19 +1,18 @@
 body {
-  overflow-x: hidden;
-  background-color: rgb(253, 253, 253);
+    overflow-x: hidden;
+    background-color: rgb(253, 253, 253);
 }
 /* Estilos para el Hero */
 
 .hero {
-  background-image: url(/src/img/hero3.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: left 30%;
-  height: 20rem;
-  margin: 0 0 2rem 0;
-  padding: 0;
+    background-image: url(/src/img/hero3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left 30%;
+    height: 20rem;
+    margin: 0 0 2rem 0;
+    padding: 0;
 }
-
 
 /* Estilos para la tarjeta */
 
@@ -49,7 +48,7 @@ body {
 }
 
 .container-imagen:hover .tarjeta-imagen {
-  transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 .tarjeta-contenido {
@@ -113,8 +112,44 @@ body {
 }
 
 /* Estilos para el carrito */
-.carrito {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+
+.carrito-modal {
+    position: absolute;
+    top: 45px;
+    right: 0;
+    width: 65%;
+    height: auto;
+    padding: 3rem;
+    background: rgba(203, 199, 199, 0.23);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(11.9px);
+    -webkit-backdrop-filter: blur(11.9px);
+    border: 1px solid rgba(203, 199, 199, 0.3);
+    z-index: 1000;
+}
+
+.shopping_cart_title {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.table {
+    background: rgba(203, 199, 199, 0.23);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(11.9px);
+    -webkit-backdrop-filter: blur(11.9px);
+}
+.table>:not(caption)>*>* {
+    background-color: transparent;
+}
+.body-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Puedes ajustar el nivel de oscurecimiento aquí */
+    z-index: 0; /* Coloca el fondo oscuro detrás del modal */
 }

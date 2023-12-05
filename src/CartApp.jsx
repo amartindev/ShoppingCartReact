@@ -6,8 +6,11 @@ import { DetailPage } from "./pages/DetailPage";
 import { ProductsProvider } from "./context/ProductsProvider";
 import { CartProvider } from "./context/CartProvider";
 
+
 export const CartApp = () => {
+
     return (
+        <>
         <ProductsProvider>
             <CartProvider>
                 <NavBar></NavBar>
@@ -30,5 +33,7 @@ export const CartApp = () => {
                 </div>
             </CartProvider>
         </ProductsProvider>
+
+          </>
     );
 };

@@ -3,10 +3,12 @@ import { ShoppingCart } from "@mui/icons-material";
 import { NavLink } from "react-router-dom";
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
-
+import { useState } from "react";
+import Modal from "./Modal";
 
 export const NavBar = () => {
-    const { shoppingList } = useContext(CartContext)
+    const { shoppingList } = useContext(CartContext);
+    const [isModalOpen, setIsModalOpen] = useState(false);
     return (
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
             <div className="container-fluid">
@@ -39,12 +41,29 @@ export const NavBar = () => {
                                 Home
                             </NavLink>
                         </li>
+                        <li>
+                            <NavLink
+                                to="/"
+                                className="nav-link active"
+                                aria-current="page"
+                                href="#"
+                            >
+                                Modal
+                            </NavLink>
+                        </li>
                     </ul>
-                    <NavLink to="/cart">
-                        <Badge badgeContent={shoppingList.length} color="primary">
+                    <NavLink onClick={() => setIsModalOpen(true)}>
+                        <Badge
+                            badgeContent={shoppingList.length}
+                            color="primary"
+                        >
                             <ShoppingCart color="action" />
                         </Badge>
                     </NavLink>
+                    <Modal
+                        isOpen={isModalOpen}
+                        closeModal={() => setIsModalOpen(false)}
+                    />
                 </div>
             </div>
         </nav>
