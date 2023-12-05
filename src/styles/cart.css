@@ -8,9 +8,8 @@ body {
   background-image: url(/src/img/hero3.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center;
-  height: 60vh;
-  max-width: 100%;
+  background-position: left 30%;
+  height: 20rem;
   margin: 0 0 2rem 0;
   padding: 0;
 }
@@ -87,7 +86,7 @@ body {
 }
 
 .boton-agregar {
-    background-color: #4caf50;
+    background-color: #3a643b;
     color: white;
     border: none;
     padding: 5px 10px;
@@ -97,10 +96,10 @@ body {
 }
 
 .boton-agregar:hover {
-    background-color: #45a049;
+    background-color: #2b492d;
 }
 .boton-quitar {
-    background-color: #af4c4c;
+    background-color: #8f4747;
     color: white;
     border: none;
     padding: 5px 10px;
@@ -110,7 +109,7 @@ body {
 }
 
 .boton-quitar:hover {
-    background-color: #a04545;
+    background-color: #7c4141;
 }
 
 /* Estilos para el carrito */
