@@ -24,6 +24,7 @@ export const ComprasPage = () => {
                 {products.map((product) => (
                     <Card
                         key={product.id}
+                        id={product.id}
                         image={product.image}
                         title={product.title}
                         category={product.category}

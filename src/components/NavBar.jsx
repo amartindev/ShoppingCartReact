@@ -43,23 +43,20 @@ export const NavBar = () => {
                         </li>
                         <li>
                             <NavLink
-                                to="/"
+                                to="/cart"
                                 className="nav-link active"
                                 aria-current="page"
                                 href="#"
                             >
-                                Modal
+                                Shopping Cart
                             </NavLink>
                         </li>
                     </ul>
-                    <NavLink onClick={() => setIsModalOpen(true)}>
-                        <Badge
-                            badgeContent={shoppingList.length}
-                            color="primary"
-                        >
+                    <a href="#" onClick={() => setIsModalOpen(true)}>
+                        <Badge badgeContent={shoppingList.length} color="primary">
                             <ShoppingCart color="action" />
                         </Badge>
-                    </NavLink>
+                    </a>
                     <Modal
                         isOpen={isModalOpen}
                         closeModal={() => setIsModalOpen(false)}

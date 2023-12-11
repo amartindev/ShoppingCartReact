@@ -71,6 +71,7 @@ body {
 
 .tarjeta-titulo-link {
     text-decoration: none;
+    cursor: pointer;
     color: black;
 }
 
@@ -144,12 +145,4 @@ body {
 .table>:not(caption)>*>* {
     background-color: transparent;
 }
-.body-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Puedes ajustar el nivel de oscurecimiento aquí */
-    z-index: 0; /* Coloca el fondo oscuro detrás del modal */
-}
+
