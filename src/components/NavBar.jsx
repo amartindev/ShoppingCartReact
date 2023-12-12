@@ -77,11 +77,15 @@ export const NavBar = () => {
                         </li>
                     </ul>
                     <a href="#" onClick={toggleModal}>
-                <Badge badgeContent={shoppingList.length} color="primary">
-                    <ShoppingCart color="action" />
-                </Badge>
-            </a>
-            <Modal isOpen={isModalOpen} closeModal={toggleModal} />
+                        <Badge
+                            badgeContent={shoppingList.length}
+                            color="primary"
+                            className="badge-cart"
+                        >
+                            <ShoppingCart color="action" />
+                        </Badge>
+                    </a>
+                    <Modal isOpen={isModalOpen} closeModal={toggleModal} />
                 </div>
             </div>
         </nav>

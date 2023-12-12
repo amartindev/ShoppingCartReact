@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import { ProductsContext } from "../context/ProductsContext";
+import { Rating } from "@mui/material";
 
 export const DetailPage = () => {
     const { products } = useContext(ProductsContext);
@@ -35,31 +36,74 @@ export const DetailPage = () => {
     };
 
     return (
-            <div className="tarjeta">
-                {product ? (
-                    <>
-                        <img src={product.image} alt={product.title} className="tarjeta-imagen" />
-                        <div className="tarjeta-contenido">
-                            <p className="tarjeta-categoria">{product.category}</p>
-                            <h3 className="tarjeta-titulo">{product.title}</h3>
-                            <p className="tarjeta-precio">${product.price}</p>
+        <div className="detail-page">
+            {product ? (
+                <>
+                    <div className="container-image-content">
+                        <div className="container-image">
+                            <img
+                                src={product.image}
+                                alt={product.title}
+                                className="image-product-detail"
+                            />
+                        </div>
+                        <div className="container-content">
+                            <h2 className="title-product-detail">
+                                {product.title}
+                            </h2>
+                            <p className="tarjeta-categoria">
+                                {product.category}
+                            </p>
+                            <p className="price-product-detail">
+                                ${product.price}
+                            </p>
+                            <div className="rate-product-detail">
+                                <Rating
+                                    name="read-only"
+                                    value={product.rating.rate}
+                                    readOnly
+                                />
+                                <p>&nbsp;{product.rating.rate}</p>
+                                <span>&nbsp;|&nbsp;</span>
+                                <p>{product.rating.count} reviews</p>
+                            </div>
+
+                            <br />
                             {added ? (
-                                <button type="button" className="boton-quitar" onClick={handleDelete}>
+                                <button
+                                    type="button"
+                                    className="boton-quitar button-product-detail"
+                                    onClick={handleDelete}
+                                >
                                     Remove
                                 </button>
                             ) : (
-                                <button type="button" className="boton-agregar" onClick={handleAdd}>
+                                <button
+                                    type="button"
+                                    className="boton-agregar button-product-detail"
+                                    onClick={handleAdd}
+                                >
                                     Add
                                 </button>
                             )}
                         </div>
-                    </>
-                ) : (
-                    <p>Loading...</p>
-                )}
-            </div>
-        );
+                    </div>
 
+                    <div className="container-description">
+                        <p>
+                            <b>Description</b>
+                        </p>
+                        <hr />
+                        <p className="description-detail">
+                            <i>{product.description}</i>
+                        </p>
+                    </div>
+                </>
+            ) : (
+                <p>Loading...</p>
+            )}
+        </div>
+    );
 };
 
 export default DetailPage;

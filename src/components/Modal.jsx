@@ -1,5 +1,6 @@
 import { CartPage } from "../pages/CartPage";
 
+
 const Modal = ({ isOpen, closeModal }) => {
     if (!isOpen) return null;
 
@@ -13,7 +14,7 @@ const Modal = ({ isOpen, closeModal }) => {
                 <button onClick={closeModal} className="button-close-modal"><i className="bi bi-x"></i></button>
                 <div>
                     <p className="shopping_cart_title">
-                        Shopping Cart Kleidung
+                        Shopping Cart
                     </p>
                     <CartPage></CartPage>
                 </div>
