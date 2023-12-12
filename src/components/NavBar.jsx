@@ -9,6 +9,10 @@ import Modal from "./Modal";
 export const NavBar = () => {
     const { shoppingList } = useContext(CartContext);
     const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const toggleModal = () => {
+        setIsModalOpen(!isModalOpen);
+    };
     return (
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
             <div className="container-fluid">
@@ -43,6 +47,26 @@ export const NavBar = () => {
                         </li>
                         <li>
                             <NavLink
+                                to="/men"
+                                className="nav-link active"
+                                aria-current="page"
+                                href="#"
+                            >
+                                Men
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink
+                                to="/women"
+                                className="nav-link active"
+                                aria-current="page"
+                                href="#"
+                            >
+                                Women
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink
                                 to="/cart"
                                 className="nav-link active"
                                 aria-current="page"
@@ -52,15 +76,12 @@ export const NavBar = () => {
                             </NavLink>
                         </li>
                     </ul>
-                    <a href="#" onClick={() => setIsModalOpen(true)}>
-                        <Badge badgeContent={shoppingList.length} color="primary">
-                            <ShoppingCart color="action" />
-                        </Badge>
-                    </a>
-                    <Modal
-                        isOpen={isModalOpen}
-                        closeModal={() => setIsModalOpen(false)}
-                    />
+                    <a href="#" onClick={toggleModal}>
+                <Badge badgeContent={shoppingList.length} color="primary">
+                    <ShoppingCart color="action" />
+                </Badge>
+            </a>
+            <Modal isOpen={isModalOpen} closeModal={toggleModal} />
                 </div>
             </div>
         </nav>

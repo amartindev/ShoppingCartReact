@@ -5,7 +5,8 @@ import { CartPage } from "./pages/CartPage";
 import { DetailPage } from "./pages/DetailPage";
 import { ProductsProvider } from "./context/ProductsProvider";
 import { CartProvider } from "./context/CartProvider";
-
+import { Women } from "./pages/Women";
+import { Men } from "./pages/Men";
 
 export const CartApp = () => {
 
@@ -27,6 +28,14 @@ export const CartApp = () => {
                         <Route
                             path="/detail"
                             element={<DetailPage></DetailPage>}
+                        ></Route>
+                        <Route
+                            path="/men"
+                            element={<Men></Men>}
+                        ></Route>
+                        <Route
+                            path="/women"
+                            element={<Women></Women>}
                         ></Route>
                         <Route path="/*" element={<Navigate to="/" />}></Route>
                     </Routes>

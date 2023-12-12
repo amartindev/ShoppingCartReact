@@ -1,6 +1,7 @@
 body {
     overflow-x: hidden;
     background-color: rgb(253, 253, 253);
+    height: 100%
 }
 /* Estilos para el Hero */
 
@@ -112,21 +113,28 @@ body {
     background-color: #7c4141;
 }
 
+.boton-buy {
+    background-color: #373e4e;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: auto;
+}
+.boton-buy:hover{
+    border: 1px solid #373e4e ;
+}
+
 /* Estilos para el carrito */
 
 .carrito-modal {
     position: absolute;
     top: 45px;
     right: 0;
-    width: 65%;
+    width: 60%;
     height: auto;
     padding: 3rem;
-    background: rgba(203, 199, 199, 0.23);
     border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(11.9px);
-    -webkit-backdrop-filter: blur(11.9px);
-    border: 1px solid rgba(203, 199, 199, 0.3);
+    background: #e7e9ed;
     z-index: 1000;
 }
 
@@ -141,8 +149,72 @@ body {
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(11.9px);
     -webkit-backdrop-filter: blur(11.9px);
+    z-index: 1500;
 }
 .table>:not(caption)>*>* {
     background-color: transparent;
 }
 
+.back-modal {
+    background: rgba(203, 199, 199, 0.23);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(11.9px);
+    -webkit-backdrop-filter: blur(11.9px);
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 200vh;
+    overflow-x: hidden;
+    z-index: 1;
+}
+
+.botones-cantidad {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border: 1px solid #1c1f2c;
+    border-radius: 2em;
+}
+
+.btn-outline-primary {
+    border: none;
+    color: #1c1f2c;
+}
+.btn-outline-primary:hover {
+    color: #fff;
+    background-color: #1c1f2c;
+}
+.cant-minus {
+    border-radius: 2em 0 0 2em;
+}
+.cant-center {
+    border-radius: 0;
+}
+.cant-plus {
+    border-radius: 0 2em 2em 0;
+}
+.btn-outline-danger {
+    border: none;
+    font-size: 25px;
+
+}
+td {
+    vertical-align: middle;
+}
+
+.button-close-modal {
+    border: none;
+    background-color: transparent;
+    font-size: 40px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+.bi-x:hover {
+    background: rgba(203, 199, 199, 0.23);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(11.9px);
+    -webkit-backdrop-filter: blur(11.9px);
+}

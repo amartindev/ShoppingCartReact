@@ -25,29 +25,32 @@ export const CartPage = () => {
                     </thead>
                     <tbody>
                         {shoppingList.map((item) => (
-                            <tr key={item.id}>
-                                <th>{item.title}</th>
+                            <>
+                            <tr key={item.id} className="fila-item">
+                                <td>{item.title}</td>
                                 <td>{item.price}</td>
                                 <td>
+                                    <div className="botones-cantidad">
                                     <button
-                                        className="btn btn-outline-primary"
+                                        className="btn btn-outline-primary cant-minus"
                                         onClick={() =>
                                             decreaseQuantity(item.id)
                                         }
                                     >
                                         -
                                     </button>
-                                    <button className="btn btn-outline-primary">
+                                    <button className="btn btn-outline-primary cant-center">
                                         {item.cantidad}
                                     </button>
                                     <button
-                                        className="btn btn-outline-primary"
+                                        className="btn btn-outline-primary cant-plus"
                                         onClick={() =>
                                             increaseQuantity(item.id)
                                         }
                                     >
                                         +
                                     </button>
+                                    </div>
                                 </td>
                                 <td>
                                     <button
@@ -55,22 +58,27 @@ export const CartPage = () => {
                                         className="btn btn-outline-danger"
                                         onClick={() => deleteItem(item.id)}
                                     >
-                                        Delete
+                                        <i className="bi bi-bag-x"></i>
                                     </button>
                                 </td>
                             </tr>
+
+                            </>
                         ))}
-                        <th>
+                        <tr>
+                        <td>
                             <b>TOTAL: </b>
-                        </th>
+                        </td>
                         <td></td>
                         <td></td>
                         <td>${calcularTotal()}</td>
+                        </tr>
+                        <tr><br /></tr>
                     </tbody>
                 </table>
                 <div className="d-grid gap-2">
                     <button
-                        className="btn btn-info"
+                        className="btn boton-buy"
                         disabled={shoppingList < 1}
                     >
                         Buy Now

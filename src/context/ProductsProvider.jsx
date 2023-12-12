@@ -3,6 +3,7 @@ import { ProductsContext } from "./ProductsContext";
 
 export const ProductsProvider = ({ children }) => {
     const [products, setProducts] = useState([]);
+    const [error, setError] = useState(null);
 
     const fetchProducts = async () => {
         try {
@@ -12,6 +13,8 @@ export const ProductsProvider = ({ children }) => {
             setProducts(filteredProducts);
         } catch (error) {
             console.error("Error al obtener productos:", error);
+            setError("Error al obtener productos. Inténtalo de nuevo más tarde.");
+
         }
     };
     
@@ -21,7 +24,7 @@ export const ProductsProvider = ({ children }) => {
     }, []);
 
     return (
-        <ProductsContext.Provider value={{ products }}>
+        <ProductsContext.Provider value={{ products, error }}>
             {children}
         </ProductsContext.Provider>
     );
