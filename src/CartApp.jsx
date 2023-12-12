@@ -7,6 +7,7 @@ import { ProductsProvider } from "./context/ProductsProvider";
 import { CartProvider } from "./context/CartProvider";
 import { Women } from "./pages/Women";
 import { Men } from "./pages/Men";
+import { Footer } from "./components/Footer"
 
 export const CartApp = () => {
 
@@ -42,7 +43,8 @@ export const CartApp = () => {
                 </div>
             </CartProvider>
         </ProductsProvider>
-
+        <Footer></Footer>
+        
           </>
     );
 };

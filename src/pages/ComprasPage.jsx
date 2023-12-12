@@ -3,6 +3,7 @@ import { Card } from "../components/Card";
 import { ProductsContext } from "../context/ProductsContext";
 import { CartContext } from "../context/CartContext";
 
+
 export const ComprasPage = () => {
     const { products } = useContext(ProductsContext);
 
@@ -34,6 +35,7 @@ export const ComprasPage = () => {
                     ></Card>
                 ))}
             </div>
+            
         </>
     );
 };
