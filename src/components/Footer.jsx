@@ -16,20 +16,45 @@ export const Footer = () => {
                     </svg>
                 </div>
                 <div className="container-footer">
-                    <img src="./src/img/rabbitorigami.png" alt="logo origami rabbit" />
+                    <div className="container-footer-img"></div>
                     <h4>Antonio Martin</h4>
                     <div className="footer-links">
-                       <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="http://amartindev.github.io" target="_blank" rel="noopener noreferrer">Portfolio</a></li>
-                        <li><a href="https://github.com/amartindev" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-                        <li><a href="https://www.linkedin.com/in/amartindev/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-                        </ul> 
+                        <ul>
+                            <li>
+                                <a href="#">Home</a>
+                            </li>
+                            <li>
+                                <a
+                                    href="http://amartindev.github.io"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    Portfolio
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="https://github.com/amartindev"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    GitHub
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="https://www.linkedin.com/in/amartindev/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    LinkedIn
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                     <br />
                     <p>© Copyright 2024. Made by Antonio Martín</p>
                 </div>
-                
             </div>
         </>
     );
