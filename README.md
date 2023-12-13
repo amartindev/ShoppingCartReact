@@ -2,6 +2,8 @@
 
 This repository contains the source code for Kleidung, an online clothing store developed in React using Vite as the bundler. The store utilizes the FakeStoreAPI to fetch fictional product data. Additionally, it features a functional shopping cart, a responsive design, and is implemented with Bootstrap and Material-UI (MUI) components.
 
+**Project Page:** [https://shopping-cart-kleidung.netlify.app/](https://shopping-cart-kleidung.netlify.app/)
+
 ## Features
 
 - **FakeStoreAPI**: The store leverages the FakeStoreAPI to retrieve product data, categories, and details necessary to simulate a real store.
