@@ -400,3 +400,7 @@ td {
     border: 1px solid #fff;
     border-radius: 2em;
 }
+
+.tarjeta-imagen-small {
+    width: 5rem;
+}

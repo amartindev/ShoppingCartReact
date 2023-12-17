@@ -17,6 +17,7 @@ export const CartPage = () => {
                 <table className="table">
                     <thead>
                         <tr>
+                            <th scope="col">Item</th>
                             <th scope="col">Name</th>
                             <th scope="col">Price</th>
                             <th scope="col">Cant.</th>
@@ -27,6 +28,7 @@ export const CartPage = () => {
                         {shoppingList.map((item) => (
                             <>
                             <tr key={item.id} className="fila-item">
+                                <td><img src={item.image} className="tarjeta-imagen-small" /></td>
                                 <td>{item.title}</td>
                                 <td>{item.price}</td>
                                 <td>
